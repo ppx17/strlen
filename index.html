@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 	<title>strlen(); //online!</title>
 	
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 	<style type="text/css">
 	h1 {
@@ -44,7 +42,9 @@
 	  color: #c33;
 	  width:100%;
 	  resize:none;
-	  <!-- <!-- t --> -->
+	}
+	textarea.param:active, textarea.param:hover {
+		border: 0;
 	}
 	div.tab {
 	  margin-left:50px;
@@ -67,10 +67,7 @@
 			<span class='string'>"</span><span class='keyword'>);</span><br>
 			<span class='default'>?&gt;</span>
 		</div>
-
 	</div>
-
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="/js/jquery.min.js"></script>
 	<script src="/js/jquery.xautoresize.min.js"></script>
 	<script type="text/javascript">
@@ -81,14 +78,14 @@
 	$('#input').focus();
 	$('#input').on('change keyup paste', function(evt) { doStrlen(evt.target); });
 	$('#input').xautoresize({
-					force: true, //if true, change overflow to scroll to get correct size, then change back to previous overflow.
-					autoHeightUp: true, //auto increase height to fit content. Use css max-height to set maximum height.
-					autoHeightDown: true, //auto reduce height to fit content. Use css min-height to set minimum height.
-					keyup: true, //enable auto resize for keyup event
-					keydown: true, //enable auto resize for keydown event
-					focus: true, //enable auto resize for focus event
-					change: true
-					});
+		force: true,
+		autoHeightUp: true, 
+		autoHeightDown: true,
+		keyup: true,
+		keydown: true, 
+		focus: true,
+		change: true
+	});
 	</script>
   </body>
 </html>
