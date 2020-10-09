@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>strlen(); //online!</title>
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+	<style type="text/css">
+	h1 {
+	  font-size:5rem;
+	}
+	div.code {
+      font-family: monospace;
+	}
+	
+	span.html {
+	  color: black;
+	  background-color: transparent;
+	}
+	span.comment {
+	  color: #4F5B93;
+	  background-color: transparent;
+	}
+	span.default {
+	  color: #369;
+	  background-color: transparent;
+	}
+	span.keyword {
+	  color: #693;
+	  background-color: transparent;
+	}
+	span.string {
+	  color: #c33;
+	  background-color: transparent;
+	}
+	textarea.param {
+	  border: 0;
+	  background-color:transparent;
+	  color: #c33;
+	  width:100%;
+	  resize:none;
+	  <!-- <!-- t --> -->
+	}
+	div.tab {
+	  margin-left:50px;
+	  vertical-align:top;
+	}
+	</style>
+  </head>
+  <body>
+	<div class="container">
+		<div class="jumbotron code">
+			<div class="text-xs-center">
+			<h1 id="length">0</h1>
+			</div>
+			
+			<span class='default'>&lt;?php</span><br>
+			<span class='keyword'>echo</span> <span class='default'>strlen</span><span class='keyword'>(</span><span class='string'>"</span><br>
+			<div class="tab">
+			<textarea class="param" id="input" rows="1"></textarea>
+			</div>
+			<span class='string'>"</span><span class='keyword'>);</span><br>
+			<span class='default'>?&gt;</span>
+		</div>
+
+	</div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.xautoresize.min.js"></script>
+	<script type="text/javascript">
+	var doStrlen = function(target) {
+		$('#length').text( $(target).val().length );
+	};
+	doStrlen($('#input'));
+	$('#input').focus();
+	$('#input').on('change keyup paste', function(evt) { doStrlen(evt.target); });
+	$('#input').xautoresize({
+					force: true, //if true, change overflow to scroll to get correct size, then change back to previous overflow.
+					autoHeightUp: true, //auto increase height to fit content. Use css max-height to set maximum height.
+					autoHeightDown: true, //auto reduce height to fit content. Use css min-height to set minimum height.
+					keyup: true, //enable auto resize for keyup event
+					keydown: true, //enable auto resize for keydown event
+					focus: true, //enable auto resize for focus event
+					change: true
+					});
+	</script>
+  </body>
+</html>
